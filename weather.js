@@ -64,11 +64,11 @@ let handleWeatherResponse = function(response) {
 
   for (let i=0; i<6; i++) {
     let weather = response.daily.data[i];
-    let html = '<div class="col-4">';
-    html = html + '<h3>' + icon(weather.icon) + '</h3>';
-    html = html + '<h4>' + Math.round(weather.apparentTemperatureHigh) + '|' + Math.round(weather.apparentTemperatureLow) + '</h4>';
-    html = html + '<h5>' + weather.summary + '</h5>';
-    html = html + '</div>';
+      let html = '<div class="col-4">';
+      html = html + '<h3>' + icon(weather.icon) + '</h3>';
+      html = html + '<h4>' + Math.round(weather.apparentTemperatureHigh) + '|' + Math.round(weather.apparentTemperatureLow) + '</h4>';
+      html = html + '<h5>' + weather.summary + '</h5>';
+      html = html + '</div>';
     $(".forecast").append(html);
   }
 
